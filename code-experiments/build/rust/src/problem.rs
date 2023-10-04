@@ -85,6 +85,20 @@ impl Problem<'_> {
         suite::ProblemIdx(idx)
     }
 
+    /// Returns the instance index of the problem in its current suite.
+    pub fn instance_index(&self) -> suite::InstanceIdx {
+        let idx = unsafe { coco_sys::coco_problem_get_suite_dep_instance(self.inner) };
+
+        suite::InstanceIdx(idx)
+    }
+
+    /// Returns the function index of the problem in its current suite.
+    pub fn function_index(&self) -> suite::FunctionIdx {
+        let idx = unsafe { coco_sys::coco_problem_get_suite_dep_function(self.inner) };
+
+        suite::FunctionIdx(idx)
+    }
+
     /// Evaluates the problem at `x` and returns the result in `y`.
     ///
     /// The length of `x` must match [Problem::dimension] and the

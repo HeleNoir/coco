@@ -589,13 +589,13 @@ size_t coco_problem_get_suite_dep_index(const coco_problem_t *problem) {
   return problem->suite_dep_index;
 }
 
-static size_t coco_problem_get_suite_dep_function(const coco_problem_t *problem) {
+size_t coco_problem_get_suite_dep_function(const coco_problem_t *problem) {
   assert(problem != NULL);
   assert(problem->suite_dep_function > 0);
   return problem->suite_dep_function;
 }
 
-static size_t coco_problem_get_suite_dep_instance(const coco_problem_t *problem) {
+size_t coco_problem_get_suite_dep_instance(const coco_problem_t *problem) {
   assert(problem != NULL);
   assert(problem->suite_dep_instance > 0);
   return problem->suite_dep_instance;

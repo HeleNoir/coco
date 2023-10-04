@@ -442,6 +442,16 @@ const double *coco_problem_get_largest_fvalues_of_interest(const coco_problem_t 
 size_t coco_problem_get_suite_dep_index(const coco_problem_t *problem);
 
 /**
+ * @brief Returns the function_index of the problem in its current suite.
+ */
+size_t coco_problem_get_suite_dep_function(const coco_problem_t *problem);
+
+/**
+ * @brief Returns the instance_index of the problem in its current suite.
+ */
+size_t coco_problem_get_suite_dep_instance(const coco_problem_t *problem);
+
+/**
  * @brief Returns an initial solution, i.e. a feasible variable setting, to the problem.
  */
 void coco_problem_get_initial_solution(const coco_problem_t *problem, double *initial_solution);
