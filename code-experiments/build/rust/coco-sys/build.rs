@@ -47,6 +47,7 @@ fn generate_bindings() {
         .blocklist_item("FP_ZERO")
         .blocklist_item("FP_INFINITE")
         .blocklist_item("FP_NAN")
+        .blocklist_type("__mingw_ldbl_type_t")
         .generate()
         .expect("Unable to generate bindings");
 
